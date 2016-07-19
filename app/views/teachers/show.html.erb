@@ -1,2 +1,5 @@
-<h2><%= teacher.name %></h2>
-<p><%= link_to teacher.name, teacher %>
+<h2><%= link_to teacher.name, teacher %></h2>
+
+<% teacher.students.each do |n| %>
+<%= link_to n.name, student_path(n) %>
+<% end %>

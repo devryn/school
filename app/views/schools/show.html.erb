@@ -1,2 +1,16 @@
 <h2><%= school.name %></h2>
-<p><%= link_to school.name, school %>
+<p><%= school.teachers.count %> Teachers </p>
+<p><%= school.students.count %> Students </p>
+<% school.teachers.each do |teacher| %>
+  <h3>Teacher: <%= link_to teacher.name, teacher_path(teacher) %></h3>
+  <p><%= teacher.students.count %> Students</p>
+    <% teacher.students[0..-2].each do |student| %>
+      <%= link_to student.name, student_path(student) %>
+    <% end %>
+<% end %>
+<h3><%= school.courses.count %> Courses: </h3>
+<% school.courses.each do |course| %>
+    <ul>
+      <li> <%= link_to course.name, course %> </li>
+    </ul>
+<% end %>

@@ -53,6 +53,6 @@ class SchoolsController < ApplicationController
 
   private
   def school_params
-    params.require(:School).permit(:name)
+    params.require(:school).permit(:name)
   end
 end

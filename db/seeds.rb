@@ -10,6 +10,11 @@
   school = School.create!(name: Faker::StarWars.planet)
 
   10.times do
+    Course.create!(school_id: school.id,
+                   name: Faker::Beer.yeast)
+  end
+
+  10.times do
     teacher = Teacher.create!(school_id: school.id,
                               name: Faker::Superhero.name)
 
