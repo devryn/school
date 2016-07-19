@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 gem 'bootstrap-sass'
-gem 'sass-rails'
 gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

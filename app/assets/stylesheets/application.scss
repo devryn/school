@@ -17,10 +17,14 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ a {
+   color: darken(#7D5BA6, 50%);
+ }
+
  .main-header {
-  background-color: #CBEAF5;
+  background-color: #ACFCD9;
   padding: 8px;
-  color:#1186AD;
+  color:darken(#55D6BE, 33%);
 
   img {
     display: inline;
@@ -31,11 +35,17 @@
     margin-top: 33px;
   }
   nav {
-    margin-top: 45px;
+    margin-top: 7.25em;
   }
 }
 
 body {
-  background-color: #F5F8FA;
-  color: #8F178B;
+  background-color: #DDDDDD;
+  color: #FC6471;
+  .contents {
+    padding: 10px;
+  }
+  li {
+    color:darken(#55D6BE, 33%)
+  }
 }
