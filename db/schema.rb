@@ -23,11 +23,9 @@ ActiveRecord::Schema.define(version: 20160719184307) do
 
   create_table "students", force: :cascade do |t|
     t.string   "name",       null: false
-    t.integer  "schooln_id", null: false
     t.integer  "teacher_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schooln_id"], name: "index_students_on_schooln_id", using: :btree
     t.index ["teacher_id"], name: "index_students_on_teacher_id", using: :btree
   end
 
@@ -39,7 +37,6 @@ ActiveRecord::Schema.define(version: 20160719184307) do
     t.index ["schooln_id"], name: "index_teachers_on_schooln_id", using: :btree
   end
 
-  add_foreign_key "students", "schoolns"
   add_foreign_key "students", "teachers"
   add_foreign_key "teachers", "schoolns"
 end

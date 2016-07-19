@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :students
   resources :teachers
   resources :schoolns
-  
-  root 'schooln#index'
+
+  root 'schoolns#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
