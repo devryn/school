@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 3.times do
-  schooln = Schooln.create!(name: Faker::Space.galaxy)
+  school = School.create!(name: Faker::StarWars.planet)
 
   10.times do
-    teacher = Teacher.create!(schooln_id: schooln.id,
+    teacher = Teacher.create!(school_id: school.id,
                               name: Faker::Superhero.name)
 
     15.times do

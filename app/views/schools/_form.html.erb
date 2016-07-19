@@ -1,12 +1,12 @@
 <h2><%= form_title %></h2>
 
-<% if schooln.errors.any? %>
-    <% schooln.errors.full_messages.each do |msg| %>
+<% if school.errors.any? %>
+    <% school.errors.full_messages.each do |msg| %>
       <p> <%= msg %></p>
     <% end %>
   <% end %>
 
-  <%= form_for(schooln) do |f| %>
+  <%= form_for(school) do |f| %>
     <label for="name">Name</label>
 
     <%=f.text_area :name, placeholder: 'Awesome School Name', class: 'form-control' %>

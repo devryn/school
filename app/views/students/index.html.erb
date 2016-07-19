@@ -1,0 +1,7 @@
+<h2>Students</h2>
+<% students.each do |student| %>
+<div class='student'>
+  <ul>
+    <li><%= link_to student.name, student %>
+</div>
+<% end %>

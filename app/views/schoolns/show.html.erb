@@ -1,0 +1,4 @@
+<h2><%= school.name %></h2>
+<% schools.each do |sc| %>
+<p><%= link_to sc.body, school_path(sc) %>
+  <% end %>

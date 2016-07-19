@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20160719184307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "schoolns", force: :cascade do |t|
+  create_table "schools", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20160719184307) do
 
   create_table "teachers", force: :cascade do |t|
     t.string   "name",       null: false
-    t.integer  "schooln_id", null: false
+    t.integer  "school_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schooln_id"], name: "index_teachers_on_schooln_id", using: :btree
+    t.index ["school_id"], name: "index_teachers_on_school_id", using: :btree
   end
 
   add_foreign_key "students", "teachers"
-  add_foreign_key "teachers", "schoolns"
+  add_foreign_key "teachers", "schools"
 end
