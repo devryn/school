@@ -10,24 +10,27 @@
 
 
 <header class='main-header'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-sm-3'>
-              <h1>Secure Schools</h1>
-            </div>
-            <div class='col-sm-2 col-sm-offset-1'>
-              <img src='http://kittybungalow.org/images/holidayraffle/goodshop.jpg'/>
-            </div>
-            <div class='col-sm-5'>
-            <%= render 'shared/nav' %>
-          </div>
-          </div>
-        </div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-3'>
+        <h1>Secure Schools</h1>
       </div>
-    </header>
-    <body>
-          <div class='contents'><%= yield %>
-        </div>
+      <div class='col-sm-2 col-sm-offset-1'>
+        <img src='http://kittybungalow.org/images/holidayraffle/goodshop.jpg'/>
       </div>
+      <div class='col-sm-5'>
+        <%= render 'shared/nav' %>
+      </div>
+    </div>
+  </div>
+</header>
+  <body>
+    <% if user_logged_in? %>
+      Welcome! <%= current_user.name %>
+    <% else %>
+      <%= link_to "Sign In", sessions_sign_in_path %>
+      <%= link_to "Sign Up", new_user_path %>
+    <% end %>
+    <div class='contents'><%= yield %>
     </div>
   </body>
