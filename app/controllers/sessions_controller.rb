@@ -2,6 +2,11 @@ class SessionsController < ApplicationController
   def sign_in
   end
 
+  def sign_out
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   def authenticate
     user = User.find_by(email: params[:email])
     if user.present?
@@ -18,4 +23,6 @@ class SessionsController < ApplicationController
       render :sign_in
     end
   end
+
+
 end

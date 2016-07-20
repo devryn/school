@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/sign-in'
+  delete 'sessions/sign_out'
 
   get 'sessions/sign_in'
   post 'sessions/authenticate'
