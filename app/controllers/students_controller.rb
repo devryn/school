@@ -46,7 +46,7 @@ class StudentsController < ApplicationController
       if Student.exists?(params[:id])
         Student.destroy(params[:id])
         flash[:notice] = "Student destroyed."
-        redirect_to students
+        redirect_to student
       else
         flash[:alert] = "Student was not deleted due to errors."
       end
